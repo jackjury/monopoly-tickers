@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticker</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+
+      .container {
+        width: 1000px;
+        height: 100px;
+        border: 1px solid red;
+        overflow: hidden;
+      }
+
+      .container .ticker {
+        display: flex;
+        align-items: center;
+        animation: scroll 10s linear infinite;
+      }
+
+      .team {
+        margin: 0 75px;
+        white-space: nowrap;
+        font-family: sans-serif;
+        font-size: 75px;
+      }
+
+      .value {
+        color: red;
+      }
+
+      @keyframes scroll {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(-250%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="ticker">
+        <div class="team">
+          <span class="teamName">Team 1</span>
+          <span class="value">$3,580</span>
+        </div>
+        <div class="team">
+          <span class="teamName">Team 2</span>
+          <span class="value">$8,500</span>
+        </div>
+        <div class="team">
+          <span class="teamName">Team 3</span>
+          <span class="value">$12,100</span>
+        </div>
+        <div class="team">
+          <span class="teamName">Team 4</span>
+          <span class="value">$18,999</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
